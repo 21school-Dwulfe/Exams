@@ -3,27 +3,27 @@ gcc micro_origin.c -o original -Wall -Wextra -Werror
 echo ""
 echo "TEST - <ex_1>"
 echo "NO original"
-./nooriginal ./test/ex_1
+./nooriginal ex_1
 echo "Original"
-./original ./test/ex_1
+./original ex_1
 echo ""
 echo "TEST - <ex_2>"
 echo "NO original"
-./nooriginal ./test/ex_2
+./nooriginal ex_2
 echo "Original"
-./original ./test/ex_2
+./original ex_2
 echo ""
 echo "TEST - <ex_3>"
 echo "NO original"
-./nooriginal ./test/ex_3
+./nooriginal ex_3
 echo "Original"
-./original ./test/ex_3
+./original ex_3
 echo ""
 echo "TEST - <ex_4>"
 echo "NO original"
-./nooriginal ./test/ex_4
+./nooriginal ex_4
 echo "Original"
-./original ./test/ex_4
+./original ex_4
 echo ""
 echo "TEST - <NULL>"
 echo "NO original"
@@ -33,8 +33,8 @@ echo "Original"
 echo ""
 echo "TEST - <Error file>"
 echo "NO original"
-./nooriginal ./test/ex
+./nooriginal ex
 echo "Original"
-./original ./test/ex
+./original ex
 rm nooriginal
 rm original
