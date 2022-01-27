@@ -8,8 +8,8 @@
 			"type": "lldb",
 			"request": "launch",
 			"name": "Debug",
-			"program": "${workspaceFolder}/Exam_03/a.out",
-			"args": ["ex_1"],
+			"program": "${workspaceFolder}/Exam_04/microshell",
+			"args": ["/usr/bin/yes", "/usr/bin/head"],
 			"cwd": "${workspaceFolder}"
 		}
 	]
