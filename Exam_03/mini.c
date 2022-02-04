@@ -12,7 +12,7 @@ int error(char *mes)
     int i = 0;
     while (mes[i])
         i++;
-    write(1, mes, i);
+    write(2, mes, i);
     return (1);
 }
 
