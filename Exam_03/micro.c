@@ -13,7 +13,7 @@ int    error(char *message)
 	i = 0;
 	while (message[i])
 		i++;
-	write(1, message, i);
+	write(2, message, i);
 	return (1);
 }
 
