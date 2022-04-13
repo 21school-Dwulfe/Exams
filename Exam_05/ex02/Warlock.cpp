@@ -1,8 +1,6 @@
 #include "Warlock.hpp"
 
 
-
-
 Warlock::Warlock(const std::string& name, const std::string& title) : _name(name), _title(title)
 {
     std::cout << this->_name << ": This looks like another boring day." << std::endl;
@@ -36,25 +34,23 @@ void    Warlock::introduce() const
     std::cout << this->_name << ": I am " << this->_name << ", " << this->_title << "!"<<std::endl;
 }
 
-void    Warlock::learnSpell(const ASpell* spell)
+void    Warlock::learnSpell(ASpell* spell)
 {
-    if (spell)
-        _spells.insert(std::pair<std::string, ASpell*>(spell->getName(), spell->clone()));
+   this->_spellBook.learnSpell(spell);
 }
 
 void    Warlock::forgetSpell(const std::string& spellName)
 {
-    std::map<std::string, ASpell*>::iterator it = this->_spells.find(spellName);
-
-    if (it != _spells.end())
-        this->_spells.erase(it);
+    this->_spellBook.forgetSpell(spellName);       
 }
 
 void    Warlock::launchSpell(const std::string& spellName, const ATarget& target)
 {
-    std::map<std::string, ASpell*>::iterator it = this->_spells.find(spellName);
     const ATarget* p = &target;
 
-    if (it != _spells.end() && p)
-        this->_spells[spellName]->launch(target);
+    if (!p)
+        return ;
+    ASpell *spell = _spellBook.createSpell(spellName);
+    if (spell)
+        spell->launch(target);
 }
