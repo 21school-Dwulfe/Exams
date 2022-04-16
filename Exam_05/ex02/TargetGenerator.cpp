@@ -13,7 +13,7 @@ TargetGenerator::~TargetGenerator()
 void    TargetGenerator::learnTargetType(ATarget* targetType)
 {
     if (targetType)
-        _targets[targetType->getType()] = targetType->clone();
+        _targets[targetType->getType()] = targetType;
 }
 
 void    TargetGenerator::forgetTargetType(std::string const & targetType)
@@ -22,7 +22,6 @@ void    TargetGenerator::forgetTargetType(std::string const & targetType)
 
     if (it != _targets.end())
     {
-        delete it->second;
         _targets.erase(it);
     }
 }

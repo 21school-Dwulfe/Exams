@@ -10,6 +10,7 @@ class ATarget
 {
 private:
     std::string _type;
+    ATarget();
 public:
     ATarget(const std::string& type);
     ATarget(const ATarget& target);

@@ -11,6 +11,7 @@ class ASpell
 private:
     std::string _name;
     std::string _effects;
+    ASpell();
 public:
     ASpell(const std::string& name, const std::string& title);
     ASpell(const ASpell& copy);

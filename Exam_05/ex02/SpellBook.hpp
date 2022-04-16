@@ -8,6 +8,8 @@ class SpellBook
 {
 private:
     std::map<std::string, ASpell*> _spells;
+    SpellBook(const SpellBook& copy);
+    SpellBook&    operator=(const SpellBook& copy);
 public:
     SpellBook();
     ~SpellBook();

@@ -12,6 +12,9 @@ private:
     std::string _name;
     std::string _title;
     SpellBook   _spellBook;
+    Warlock();
+    Warlock(const Warlock& copy);
+    Warlock&    operator=(const Warlock& copy);
 public:
     Warlock(const std::string& name, const std::string& title);
     virtual ~Warlock();

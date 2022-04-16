@@ -8,6 +8,8 @@ class   TargetGenerator
 {
 private:
     std::map<std::string, ATarget*> _targets; 
+    TargetGenerator(const TargetGenerator& copy);
+    TargetGenerator&    operator=(const TargetGenerator& copy);
 public:
     TargetGenerator();
     virtual ~TargetGenerator();
