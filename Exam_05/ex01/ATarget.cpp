@@ -35,7 +35,7 @@ const std::string& ATarget::getType()const
 
 void    ATarget::getHitBySpell(const ASpell& spell) const
 {
-    std::cout << this->_type << " has been "<< spell.getEffects() << "!" << std::endl;
-    std::cout << this->_type << " is the ATarget's type, and " << spell.getEffects()
-        << " is the return of the ASpell's getEffects function." << std::endl;
+    const *ASpell = &spell;
+    if (spell)
+      std::cout << this->_type << " has been "<< spell.getEffects() << "!" << std::endl;
 }
