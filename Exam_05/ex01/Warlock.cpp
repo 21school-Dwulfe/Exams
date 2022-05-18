@@ -44,7 +44,10 @@ void    Warlock::forgetSpell(const std::string& spellName)
     std::map<std::string, ASpell*>::iterator it = this->_spells.find(spellName);
 
     if (it != _spells.end())
+    {
+        delete it.second;
         this->_spells.erase(it);
+    }
 }
 
 void    Warlock::launchSpell(const std::string& spellName, const ATarget& target)
