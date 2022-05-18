@@ -7,6 +7,15 @@ Warlock::Warlock(const std::string& name, const std::string& title) : _name(name
 
 Warlock::~Warlock()
 {
+    std::map<std::string, ASpell*>::iterator be = _spells.begin();
+    std::map<std::string, ASpell*>::iterator it = _spells.end();
+    
+    while (be != it)
+    {
+        delete be->second;
+        be++;
+    }
+    _spells.clear();
     std::cout << this->_name << ": My job here is done!" <<std::endl;
 }
 
